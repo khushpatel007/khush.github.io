@@ -1,0 +1,340 @@
+/* Palette and type. Change these, then stop, and look at the page. */
+
+:root {
+  --bg: #f2f3f0;
+  --ink: #1a1c1a;
+  --muted: #4c514c;
+  --line: #d4d7d1;
+  --link: #1d3f73;
+  --mark: #d7e4cf;
+  --serif: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--mark);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 0.4rem 0.6rem;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 5.25rem 1.4rem 4.5rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.kicker,
+h2,
+.label,
+.year,
+.stack,
+.links,
+.nav,
+.draft,
+.colophon,
+.dateline {
+  font-family: var(--mono);
+  font-variant-numeric: lining-nums;
+  font-style: normal;
+}
+
+.kicker {
+  margin: 0 0 0.55rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.lede {
+  margin: 1.1rem 0 0;
+  max-width: 36em;
+  text-wrap: pretty;
+}
+
+.now {
+  margin: 0.9rem 0 0;
+  text-wrap: pretty;
+}
+
+.label {
+  margin-right: 0.55rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+}
+
+.nav {
+  margin: 1.4rem 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.nav a {
+  color: var(--ink);
+}
+
+.nav .sep {
+  color: var(--muted);
+}
+
+.draft {
+  margin: 2.25rem 0 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+main {
+  margin-top: 2.75rem;
+}
+
+section {
+  margin-top: 3rem;
+}
+
+section:first-child {
+  margin-top: 0;
+}
+
+h2 {
+  margin: 0 0 1.15rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 6.25rem 1fr;
+  column-gap: 0.85rem;
+  align-items: baseline;
+}
+
+.entry + .entry {
+  margin-top: 1.55rem;
+}
+
+.year {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h3 a {
+  color: inherit;
+  text-decoration-color: var(--line);
+}
+
+h3 a:hover {
+  text-decoration-color: var(--link);
+  color: var(--link);
+}
+
+.entry p {
+  margin: 0.3rem 0 0;
+  text-wrap: pretty;
+}
+
+.role {
+  color: var(--muted);
+}
+
+.stack {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.colophon {
+  margin: 3.5rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+/* Note pages */
+
+.home {
+  margin: 0 0 1.75rem;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+}
+
+.home a {
+  color: var(--ink);
+}
+
+.dateline {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.essay {
+  margin-top: 1.5rem;
+}
+
+.essay p,
+.essay li {
+  text-wrap: pretty;
+}
+
+.essay ul {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.essay li + li {
+  margin-top: 0.45rem;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.86em;
+}
+
+.figure {
+  margin: 1.15rem 0;
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure figcaption {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding-top: 2.75rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .entry {
+    grid-template-columns: 1fr;
+    row-gap: 0.15rem;
+  }
+
+  .year {
+    margin-bottom: 0.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  .skip,
+  .draft,
+  .nav {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    font-size: 12pt;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

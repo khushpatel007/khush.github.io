@@ -1,230 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #f5f5f3;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
-      color: #1a1a1a;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.08);
-      border-radius: 16px;
-      padding: 2.5rem;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    .header { margin-bottom: 2rem; }
-    .header h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
-    .header p { font-size: 14px; color: #666; line-height: 1.6; }
-
-    .row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
-    .field label { font-size: 13px; font-weight: 500; color: #444; }
-
-    .field input,
-    .field textarea,
-    .field select {
-      width: 100%;
-      padding: 10px 13px;
-      font-size: 14px;
-      font-family: inherit;
-      background: #fafafa;
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      color: #1a1a1a;
-      outline: none;
-      transition: border-color 0.15s, box-shadow 0.15s;
-      appearance: none;
-    }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus {
-      border-color: #a0a0ff;
-      box-shadow: 0 0 0 3px rgba(120,120,255,0.1);
-      background: #fff;
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 120px;
-      line-height: 1.6;
-    }
-
-    .field select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 13px center;
-      padding-right: 36px;
-      cursor: pointer;
-    }
-
-    .btn {
-      width: 100%;
-      padding: 12px;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: inherit;
-      background: #1a1a1a;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: opacity 0.15s, transform 0.1s;
-      margin-top: 6px;
-      letter-spacing: 0.01em;
-    }
-    .btn:hover { opacity: 0.82; }
-    .btn:active { transform: scale(0.99); }
-    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    .sent {
-      display: none;
-      text-align: center;
-      padding: 2rem 0 1rem;
-    }
-    .sent-icon {
-      width: 52px; height: 52px;
-      background: #eafaf3;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1.25rem;
-    }
-    .sent h2 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
-    .sent p { font-size: 14px; color: #666; line-height: 1.6; }
-
-    .error-msg {
-      font-size: 12px;
-      color: #d04040;
-      margin-top: 2px;
-      display: none;
-    }
-
-    @media (max-width: 480px) {
-      .card { padding: 1.75rem 1.25rem; }
-      .row { grid-template-columns: 1fr; gap: 0; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Delete the robots tag once the copy on this page is yours. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f2f3f0">
+  <title>Khush</title>
+  <meta name="description" content="I am a software engineer.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<div class="card">
-  <div class="header">
-    <h1>Get in touch</h1>
-    <p>Fill out the form below and I'll get back to you within 1–2 business days.</p>
+  <div class="page">
+    <header class="masthead">
+      <!-- Role and city. Keep it to one short line. -->
+      <p class="kicker">Software engineer · Los Angeles, CA</p>
+      <!-- Also change this name in <title>, the favicon, and notes/setup.html. -->
+      <h1>Khush Patel</h1>
+      <p class="lede">
+        I build software for a living, mostly services and the data behind them.
+        I like a small codebase, a clear owner, and a change I can explain six months later.
+      </p>
+      <p class="now">
+        <span class="label">Now</span>
+        Actively looking for a software engineering internship for Summer 2027.
+      </p>
+      <ul class="links">
+        <li><a href="mailto:hi@khush.dev">hi@khush.dev</a></li>
+        <li><a href="https://github.com/khushpatel16">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/khushpatel16">LinkedIn</a></li>
+      </ul>
+      <nav class="nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <span class="sep" aria-hidden="true"> · </span>
+        <a href="#experience">Experience</a>
+        <span class="sep" aria-hidden="true"> · </span>
+        <a href="#notes">Notes</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">Work</h2>
+
+        <article class="entry">
+          <p class="year">May 2026</p>
+          <div class="entry-body">
+            <h3><a href="https://example.com">Chronos Layer @Caltech AI Hackathon</a></h3>
+            <p>
+                Created ChronosLayer, a clinic demo validating biological age across 7 epigenetic clocks using synthetic patient data.
+            </p>
+            <p class="stack">LLM (Anthropic SDK), SQLAlchemy, Pydantic</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="year">Mar 2026</p>
+          <div class="entry-body">
+            <h3>Lapline</h3>
+            <p>
+                Built Lapline, a live Formula 1 platform that turns fragmented telemetry into explainable race-strategy insights.
+            </p>
+            <p class="stack">Python, FastAPI, TypeScript, React</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="year">Dec 2025</p>
+          <div class="entry-body">
+            <h3><a href="https://example.com">Slate Signal</a></h3>
+            <p>
+                Engineered Slate Signal, a bias-aware platform forecasting worldwide revenue for upcoming US theatrical releases.
+            </p>
+            <p class="stack">Python, Next.js, PostgreSQL, BERT, GCP</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+        <article class="entry">
+          <p class="year">May 2026– Aug 2026</p>
+          <div class="entry-body">
+            <h3>Develop For Good - Make an Impact Foundation (MAIF)</h3>
+            <p class="role">Software Engineering Intern</p>
+            <p>
+                Engineered a full-stack PHP/MySQL learning platform designed for 400+ North Carolina students across 3 career pathways,
+                implementing video lessons with timestamp-resume playback, auto-graded quizzes, and per-student progress persistence.
+            </p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="year">May 2025– Aug 2025</p>
+          <div class="entry-body">
+            <h3>Ruby Bus Pvt. Ltd. </h3>
+            <p class="role">Software Engineering Intern</p>
+            <p>
+                Built a React, FastAPI, and PostgreSQL platform that unified production, inventory, work-order, and quality-control workflows,
+                reducing weekly reporting time by 67%, from 2 hours to 40 minutes, for 20+ users.
+            </p>
+          </div>
+        </article>
+
+        <article class="entry">
+            <p class="year">Sep 2023– Dec 2024</p>
+            <div class="entry-body">
+              <h3>Adani University</h3>
+              <p class="role">Undergraduate Research Assistant</p>
+              <p>
+                Shaped the lab’s spatial-computing research roadmap by synthesizing findings from 50+ papers on digital twins, XR, and
+healthcare Metaverse applications, identifying high-impact research opportunities and technical gaps.
+              </p>
+            </div>
+          </article>
+      </section>
+
+      <!-- <section id="notes" aria-labelledby="notes-heading">
+        <h2 id="notes-heading">Notes</h2> -->
+
+        <!-- <article class="entry">
+          <p class="year">2026</p>
+          <div class="entry-body">
+            <h3><a href="notes/setup.html">Setup notes</a></h3>
+            <p>What I install on a new laptop, and the settings I forget every time.</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="year">2025</p>
+          <div class="entry-body">
+            <h3>Reading list</h3>
+            <p>Books and postmortems I keep sending to people. Still a list in a text file, not a site.</p>
+          </div>
+        </article> -->
+      </section>
+    </main>
+
+    <footer>
+      <p class="colophon">Last updated October 2026.</p>
+    </footer>
   </div>
-
-  <form id="contact-form" action="https://formspree.io/f/xykbgpbe" method="POST">
-
-    <div class="row">
-      <div class="field">
-        <label for="fname">First name</label>
-        <input type="text" id="fname" name="first_name" placeholder="Alex" required />
-      </div>
-      <div class="field">
-        <label for="lname">Last name</label>
-        <input type="text" id="lname" name="last_name" placeholder="Johnson" />
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="alex@example.com" required />
-      <span class="error-msg" id="email-error">Please enter a valid email.</span>
-    </div>
-
-    <div class="field">
-      <label for="subject">Subject</label>
-      <select id="subject" name="subject" required>
-        <option value="" disabled selected>Select a topic</option>
-        <option value="Job opportunity">Job opportunity</option>
-        <option value="Freelance project">Freelance project</option>
-        <option value="Collaboration">Collaboration</option>
-        <option value="Just saying hi">Just saying hi</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Tell me what's on your mind..." required></textarea>
-    </div>
-
-    <button type="submit" class="btn" id="submit-btn">Send message</button>
-  </form>
-
-  <div class="sent" id="sent-msg">
-    <div class="sent-icon">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <path d="M4 11l5 5L18 6" stroke="#1a9e6a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    <h2>Message sent!</h2>
-    <p>Thanks for reaching out.<br>I'll reply as soon as I can.</p>
-  </div>
-</div>
-
-<script>
-  const form = document.getElementById('contact-form');
-  const btn = document.getElementById('submit-btn');
-  const sentMsg = document.getElementById('sent-msg');
-  const emailErr = document.getElementById('email-error');
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const email = document.getElementById('email').value;
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailValid) {
-      emailErr.style.display = 'block';
-      return;
-    }
-    emailErr.style.display = 'none';
-
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        form.style.display = 'none';
-        sentMsg.style.display = 'block';
-      } else {
-        btn.disabled = false;
-        btn.textContent = 'Send message';
-        alert('Something went wrong. Please try again.');
-      }
-    } catch {
-      btn.disabled = false;
-      btn.textContent = 'Send message';
-      alert('Network error. Please check your connection.');
-    }
-  });
-</script>
-
 </body>
 </html>
